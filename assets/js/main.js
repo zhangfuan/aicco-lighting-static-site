@@ -153,7 +153,7 @@ function contactForm(){
     const data = new FormData(form);
     const subject = encodeURIComponent('AICCO LIGHTING Inquiry - ' + (data.get('product') || 'Product Quote'));
     const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nCountry: ${data.get('country')}\nCompany: ${data.get('company')}\nProduct Interest: ${data.get('product')}\nEstimated Quantity: ${data.get('quantity')}\n\nMessage:\n${data.get('message')}`);
-    const email = form.dataset.email || 'sales@example.com';
+    const email = form.dataset.email || 'admin@smartfz.com';
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     const notice = $('#form-notice');
     if(notice) notice.style.display = 'block';
