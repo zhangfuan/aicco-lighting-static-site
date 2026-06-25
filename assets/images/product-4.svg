@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="540" viewBox="0 0 720 540">
+      <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b2028"/><stop offset="1" stop-color="#07090d"/></linearGradient><radialGradient id="a" cx="70%" cy="40%" r="60%"><stop stop-color="#ffbf2f" stop-opacity=".35"/><stop offset="1" stop-color="#ffbf2f" stop-opacity="0"/></radialGradient></defs>
+      <rect width="720" height="540" rx="28" fill="url(#bg)"/>
+      <circle cx="500" cy="220" r="260" fill="url(#a)"/>
+      <circle cx="360" cy="270" r="110" fill="#171c24" stroke="#454c56" stroke-width="12"/>
+        <circle cx="360" cy="270" r="78" fill="#0a0d12" stroke="#ffbf2f" stroke-width="10"/>
+        <circle cx="360" cy="270" r="38" fill="#fff1b0"/>
+        <path d="M360 270 L90 220" stroke="#ffbf2f" stroke-width="42" stroke-linecap="round" opacity=".23"/>
+      <rect x="38" y="40" width="210" height="38" rx="19" fill="#ffbf2f"/>
+      <text x="58" y="65" fill="#111317" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="18">54W</text>
+      <text x="40" y="468" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="24">Driving Lights</text>
+      <text x="40" y="500" fill="#c6cbd3" font-family="Arial, Helvetica, sans-serif" font-size="18">IP67 Waterproof • OEM Available</text>
+    </svg>
