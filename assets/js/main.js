@@ -54,6 +54,42 @@ function renderDetail(){
   document.title = `${p.title} | AICCO LIGHTING`;
   const meta = document.querySelector('meta[name="description"]');
   if(meta) meta.setAttribute('content', `${p.title}. ${p.short} OEM and bulk order support from AICCO LIGHTING.`);
+  
+  // SEO: Inject Product Structured Data
+  const schemaId = 'product-schema';
+  let schemaScript = document.getElementById(schemaId);
+  if(!schemaScript) {
+    schemaScript = document.createElement('script');
+    schemaScript.id = schemaId;
+    schemaScript.type = 'application/ld+json';
+    document.head.appendChild(schemaScript);
+  }
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": p.title,
+    "image": [ window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/') + p.image ],
+    "description": p.short,
+    "sku": p.id,
+    "brand": {
+      "@type": "Brand",
+      "name": "AICCO LIGHTING"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "offerCount": "1",
+      "lowPrice": "0",
+      "highPrice": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "AICCO LIGHTING"
+      }
+    }
+  };
+  schemaScript.textContent = JSON.stringify(productSchema);
+
   root.innerHTML = `
     <div class="detail-grid">
       <div class="detail-image"><img src="${p.image}" alt="${p.title}"></div>
